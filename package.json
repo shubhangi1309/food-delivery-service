@@ -1,0 +1,25 @@
+{
+  "name": "food-delivery-service",
+  "version": "1.0.0",
+  "description": "This is food delivery service web app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhangi1309/food-delivery-service.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Shubhangi Modi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubhangi1309/food-delivery-service/issues"
+  },
+  "homepage": "https://github.com/shubhangi1309/food-delivery-service#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
