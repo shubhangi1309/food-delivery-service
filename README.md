@@ -71,4 +71,8 @@ npm run start/ npm start
 npm run build
 
 JSX makes developer's life easier, we can write react without JSX
+JSX is HTML like & XML like
+JSX code is transpiled before it goes to engine so that browser engine can understand it=> 
+Parcel is manager => Parcel asks BABEL(transpiler/ JS compiler) to do this
+JSX => React.creaetElement => JS object => HTMLElement(render)
 
