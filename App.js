@@ -10,11 +10,18 @@ const title = (<h1 className="head">
      React element 2
 </h1>)
 
+const TitleComponent = () => (<h1 className="head">
+     TitleComponent
+</h1>)
+
 const Heading = () => {
     return (
         <div id="container">
             {title}
             <h1>first react component</h1>
+            <TitleComponent></TitleComponent>
+            <TitleComponent/>
+            {TitleComponent()}
         </div>
     )
 }

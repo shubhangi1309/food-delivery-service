@@ -76,3 +76,9 @@ JSX code is transpiled before it goes to engine so that browser engine can under
 Parcel is manager => Parcel asks BABEL(transpiler/ JS compiler) to do this
 JSX => React.creaetElement => JS object => HTMLElement(render)
 
+Important! JSX takes care of malicious data, it SANITIZES data present in {}
+
+TitleComponent></TitleComponent>
+            <TitleComponent/>
+            {TitleComponent()}
+These 3 things are same.
