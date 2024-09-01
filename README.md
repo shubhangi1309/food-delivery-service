@@ -26,25 +26,41 @@ whatever is present on my machine is same version deployed on PROD envt
 
 babel was installed auto when parcel was installed.
 
+we will use parcel to ignite our app
+how?
+npx parcel index.html
+what will this command do?
 
+Parcel will create SERVER for us, app will run on localhost:1234
+npx means executing a package
 
+npm i react
+npm i react-dom
 
+# PARCEL
+- DEV build
+- build server
+- HMR
+- File watching algo (written in C++)
+- Caching - faster builds (.parcel-cache folder)
+- Image optimisation
+- when I create PROD build, Parcel will minify code
+- bundle
+- compress (remove white space)
+- consistent Hashing 
+- code splitting
+- differential bundling - app can be openend in diff browsers) older version as well
+- Diagnostic
+- error handling
+- HTTPS (suppose in dev envt we want to test something which only works on SSL)
+- tree shaking (100 functions are present but we use 5 functions parcel will tree shake files, remove unused code)
+- different DEV & PROD bundles (because Prod build takes more time optimisation are more)
 
+npx build index.html (for PROD)
+when it creates PROD build where does it go?
+it will bindle, minify, all of it will be placed in DIST folder
+when DEV build is done => dist will have => development envt built file (more files)
+when PROD build is done => dist will have => PROD envt built files (lesser files) => give 1html 1css 1js files and mappings. These 3 files will have all code of app which is prod ready.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+when we run build command for DEV/PROD => dist, .parcel-cache folders are created.
+so we don't need them on git
