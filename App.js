@@ -3,6 +3,21 @@ import ReactDOM from "react-dom/client";
 
 // React Element is an OBJECT equivalent to DOM elements
 // when we render react element to DOM it becomes HTML element
+const elem  = <span>Example of React element 1 in component </span>
+
+const title = (<h1 className="head">
+    {elem}
+     React element 2
+</h1>)
+
+const Heading = () => {
+    return (
+        <div id="container">
+            {title}
+            <h1>first react component</h1>
+        </div>
+    )
+}
 
 const heading = React.createElement(
   "h1",
@@ -11,4 +26,4 @@ const heading = React.createElement(
 );
 const root = ReactDOM.createRoot(document.getElementById("root")); //root of app
 
-root.render(heading);
+root.render(<Heading/>);
