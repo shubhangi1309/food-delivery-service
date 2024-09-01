@@ -48,6 +48,7 @@ npm i react-dom
 - bundle
 - compress (remove white space)
 - consistent Hashing 
+- transitive dependency?
 - code splitting
 - differential bundling - app can be openend in diff browsers) older version as well
 - Diagnostic
@@ -64,3 +65,10 @@ when PROD build is done => dist will have => PROD envt built files (lesser files
 
 when we run build command for DEV/PROD => dist, .parcel-cache folders are created.
 so we don't need them on git
+
+package.json => scripts
+npm run start/ npm start
+npm run build
+
+JSX makes developer's life easier, we can write react without JSX
+
