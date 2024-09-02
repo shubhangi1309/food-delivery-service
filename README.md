@@ -92,11 +92,15 @@ Body
     search
     restaurant container
         restaurant card
+            - img
+            - name, rating, cuisine, etc, delivery time
 footer
     copyright
     links
     address
     contact
+
+Passing props (JS object) to component is just like passing arguments to functional component
 --------------------------  SEPTEMBER 2024-----------------------
 --------------------------  SEPTEMBER 2024-----------------------
 --------------------------  SEPTEMBER 2024-----------------------
