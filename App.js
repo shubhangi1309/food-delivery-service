@@ -1,36 +1,45 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element is an OBJECT equivalent to DOM elements
-// when we render react element to DOM it becomes HTML element
-const elem  = <span>Example of React element 1 in component </span>
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://st3.depositphotos.com/14353516/31848/v/380/depositphotos_318487254-stock-illustration-fast-delivery-scooter-vector-cartoon.jpg"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-const title = (<h1 className="head">
-    {elem}
-     React element 2
-</h1>)
-
-const TitleComponent = () => (<h1 className="head">
-     TitleComponent
-</h1>)
-
-const Heading = () => {
+const Body = () => {
     return (
-        <div id="container">
-            {title}
-            <h1>first react component</h1>
-            <TitleComponent></TitleComponent>
-            <TitleComponent/>
-            {TitleComponent()}
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="restaurant-container">
+
+            </div>
         </div>
     )
 }
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Shubhangi knows React 🚀"
-);
-const root = ReactDOM.createRoot(document.getElementById("root")); //root of app
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 
-root.render(<Heading/>);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />); //Root Level Component

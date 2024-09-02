@@ -66,6 +66,7 @@ when PROD build is done => dist will have => PROD envt built files (lesser files
 when we run build command for DEV/PROD => dist, .parcel-cache folders are created.
 so we don't need them on git
 
+-------------------------- 2 SEPTEMBER 2024----------1-------------
 package.json => scripts
 npm run start/ npm start
 npm run build
@@ -82,3 +83,20 @@ TitleComponent></TitleComponent>
             <TitleComponent/>
             {TitleComponent()}
 These 3 things are same.
+
+-------------------------- 2 SEPTEMBER 2024----------2-------------
+Header
+    logo
+    nav-items
+Body
+    search
+    restaurant container
+        restaurant card
+footer
+    copyright
+    links
+    address
+    contact
+--------------------------  SEPTEMBER 2024-----------------------
+--------------------------  SEPTEMBER 2024-----------------------
+--------------------------  SEPTEMBER 2024-----------------------
