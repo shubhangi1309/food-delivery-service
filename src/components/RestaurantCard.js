@@ -1,5 +1,4 @@
 const RestaurantCard = (props) => {
-  useEffect;
   const { resData } = props;
   const {
     cloudinaryImageId,

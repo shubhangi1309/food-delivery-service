@@ -109,5 +109,16 @@ seperate file for each component
 
 export default can be written only once in a file
 NAMED export & DEFAULT export
---------------------------  SEPTEMBER 2024-----------------------
+
+React Hooks
+useState(), useEffect()
+whenever state variable updates React re-renders component
+in React 16 React Fibre came up to update the DOM to find difference old vs new
+first it finds difference then it updates actual DOM
+finding out diff b/w 2 objects is fast than b/w html
+React Fiber Architecture READ from git link 
+in useState set method 2nd argument because as soon as it is called the DIFF is called
+
+Virtual DOM representation of actual DOM
+-------------------------- 4 SEPTEMBER 2024-----------------------
 --------------------------  SEPTEMBER 2024-----------------------

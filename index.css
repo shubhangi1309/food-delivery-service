@@ -33,8 +33,9 @@
     border: 1px solid #CBC3E3;
 }
 
-.search {
-    padding: 1rem;
+.filter {
+    margin: 0.5rem;
+    cursor: pointer;
 }
 
 .res-log {
