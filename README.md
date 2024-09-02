@@ -104,5 +104,10 @@ Passing props (JS object) to component is just like passing arguments to functio
 -------------------------- 3  SEPTEMBER 2024-----------------------
 unique key when mapping component so that the only newly added one is rendered & existing one is not re-rendered.
 
+re-structure app create src folder (source code)
+seperate file for each component 
+
+export default can be written only once in a file
+NAMED export & DEFAULT export
 --------------------------  SEPTEMBER 2024-----------------------
 --------------------------  SEPTEMBER 2024-----------------------

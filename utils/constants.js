@@ -1,4 +1,4 @@
-export const LOGO_URL = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png";
+export const LOGO_URL = "https://st3.depositphotos.com/14353516/31848/v/380/depositphotos_318487254-stock-illustration-fast-delivery-scooter-vector-cartoon.jpg";
 
 export const CDN_URL ="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
