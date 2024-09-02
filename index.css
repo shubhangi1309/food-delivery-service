@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 1px solid #CBC3E3;
 }
 
 .logo {
@@ -29,7 +29,7 @@
    margin: 0.5rem;
     height: 22rem;
     width: 13rem;
-    border: 1px solid black;
+    border: 1px solid #CBC3E3;
 }
 
 .search {

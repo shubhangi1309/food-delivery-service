@@ -101,6 +101,8 @@ footer
     contact
 
 Passing props (JS object) to component is just like passing arguments to functional component
---------------------------  SEPTEMBER 2024-----------------------
+-------------------------- 3  SEPTEMBER 2024-----------------------
+unique key when mapping component so that the only newly added one is rendered & existing one is not re-rendered.
+
 --------------------------  SEPTEMBER 2024-----------------------
 --------------------------  SEPTEMBER 2024-----------------------
