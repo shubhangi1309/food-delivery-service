@@ -1,8 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #CBC3E3;
-  color: #CBC3E3;
+  border: 1px solid #cbc3e3;
+  color: #7473b5;
+  font-weight: 600;
+}
+
+h3, h4 {
+  margin:0 0 0.75rem 0;
 }
 
 .logo {
@@ -17,28 +22,49 @@
 }
 
 .nav-items > ul > li {
-    padding: 1rem;
-    margin: 1rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
-
-.res-container {
-    display: flex;
-    flex-wrap: wrap;
+.restaurant-card-container, .shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.card {
+  margin: 0.5rem 1.7rem;
+  padding: 0.5rem;
+  height: 25rem;
+  width: 13rem;
+}
+
 .res-card {
-   margin: 0.5rem;
-    height: 22rem;
-    width: 13rem;
-    border: 1px solid #CBC3E3;
+  color: #7473b5;
+  background: #E6E6FA;
+} 
+
+.restaurant-img {
+  width: 11rem;
+  height: 11rem;
+  margin: 0.75rem;
+  border: 0.25rem solid;
+  margin-bottom: 0.25rem;
 }
 
 .filter {
-    margin: 0.5rem;
-    cursor: pointer;
+  margin: 0.5rem;
+  cursor: pointer;
 }
 
 .res-log {
-    width: 11rem;
-    margin: 0.75rem;
+  width: 11rem;
+  margin: 0.75rem;
 }
+
+.shimmer-card {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); 
+  background-size: 200% 100%; 
+  animation: shimmer 1.5s infinite; 
+}
+
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }

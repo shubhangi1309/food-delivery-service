@@ -1,22 +1,30 @@
+import { CDN_URL } from "../../utils/constants";
+
 const RestaurantCard = (props) => {
   const { resData } = props;
+  console.log(resData);
   const {
     cloudinaryImageId,
     name,
     avgRating,
     cuisines,
     costForTwo,
-    deliveryTime,
-  } = props;
-  const resList = [];
+    sla,
+  } = resData.info;
+
   return (
-    <div className="res-card">
-      <img className="" src="" alt="res-logo" />
-      <h3>Meghna Food</h3>
-      <h3></h3>
-      <h4></h4>
-      <h4></h4>
-    </div>
+      <div className="card res-card">
+        <img
+          className="restaurant-img"
+          src={CDN_URL + cloudinaryImageId}
+          alt="res-logo"
+        />
+        <h3>{name}</h3>
+        <h4>{avgRating}</h4>
+        <h5>{cuisines.join(', ')}</h5>
+        <h4>{costForTwo}</h4>
+        <h4>{sla.deliveryTime+' minutes'}</h4>
+      </div>
   );
 };
 

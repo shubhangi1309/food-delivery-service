@@ -120,5 +120,24 @@ React Fiber Architecture READ from git link
 in useState set method 2nd argument because as soon as it is called the DIFF is called
 
 Virtual DOM representation of actual DOM
+-------------------ep6-------------------------
+Monolith architecture, microservice
+Q) two approaches how UI app fetch data from BE?
+Approach 1.
+app loads -> API call(500ms) -> render data on UI
+Approach 2.
+app loads -> render -> API call -> re-render app with data
+In React we only use 2nd approach
+render cycles are very fast
+
+useEffect Hook
+when does it get called?
+app loads -> render -> useEffect hook's callBack fn gets called -> API call -> re-render app with data
+todo -> useEffect, callback fn, return html debug when is it called?
+
+fetch is given by BROWSER's JS ENGINE
+
+browser's blockers are not allowing to call API from one origin to another
+
 -------------------------- 4 SEPTEMBER 2024-----------------------
---------------------------  SEPTEMBER 2024-----------------------
+--------------------------5  SEPTEMBER 2024-----------------------
