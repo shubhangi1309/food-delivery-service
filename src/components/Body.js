@@ -24,6 +24,7 @@ const Body = () => {
     setFilteredListOfRestaurants(restaurants);
   };
 
+  //Conditional Rendering
   if(listOfRestaurants.length === 0) {
     return <Shimmer/>
   }
