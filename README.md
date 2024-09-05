@@ -111,7 +111,7 @@ export default can be written only once in a file
 NAMED export & DEFAULT export
 
 React Hooks
-useState(), useEffect()
+useState(), useEffect() named imports
 whenever state variable updates React re-renders component
 in React 16 React Fibre came up to update the DOM to find difference old vs new
 first it finds difference then it updates actual DOM
@@ -171,3 +171,4 @@ SPA SINGLE PAGE APP
 2 types of routing in React
 + Client side routing => UI app has all components
 + server side routing => make network call, page is coming from server
+
