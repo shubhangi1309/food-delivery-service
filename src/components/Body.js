@@ -7,6 +7,7 @@ const Body = () => {
   //Local state variable - SCOPE - inside Component help of HOOK
   const [listOfRestaurants, setListOfRestaurants] = useState([]); //we pass default value as []
   const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -32,11 +33,22 @@ const Body = () => {
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text" className="search-box" value={searchText} onChange={(e) => {
+            setSearchText(e.target.value);
+          }}/>
+          <button onClick= {() => {
+            const searchedOptions = listOfRestaurants.filter((rest) => 
+              rest.info.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
+            )
+            setFilteredListOfRestaurants(searchedOptions);
+          }}>Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (restaurant) => restaurant.data.avgRating > 4
+              (restaurant) => restaurant.info.avgRating > 4
             );
             setFilteredListOfRestaurants(filteredList);
           }}

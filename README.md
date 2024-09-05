@@ -141,3 +141,33 @@ browser's blockers are not allowing to call API from one origin to another
 
 -------------------------- 4 SEPTEMBER 2024-----------------------
 --------------------------5  SEPTEMBER 2024-----------------------
+whenever state variables update, react triggers a reconciliation cycle (re-renders component)
+JSON VIEWER plugin to view API response pretty
+npm i react-router-dom
+const appRouter = createBrowserRouter(); // define what will happen at a specific route
+
+it takes a list of path
+an object => {path : "/", element: component}
+
+RouterProvider will provide this routing configuration (createBrowserRouter) to our APP.
+earlier, we were => root.render(<AppLayout/>)
+now, => root.render(<RouterProvider router={appRouter}/>) herre configuration will be added to RouterProvider component.
+
+react-router-dom =>  gives good error page instead of giving ugly red error in code lines
+react-router-dom => gives HOOK useRouteError => gives more info about error
+
+
+To make a functionality where we want header to come on every page and 
+the rest of the component to replace BODY component.
+=> we will make CHILDREN routes of Applayout
+OUTLET will be filled according to children
+
+<a href=""> </a> => anchor tag refreshes entire page
+navigate to diff page without reloading page we use => <Link></Link> (by react-router-dom) PERFORMANCE
+
+re-loads the page vs refreshes the component(changes the comp)
+SPA SINGLE PAGE APP
+
+2 types of routing in React
++ Client side routing => UI app has all components
++ server side routing => make network call, page is coming from server
