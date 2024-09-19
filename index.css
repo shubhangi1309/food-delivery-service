@@ -103,3 +103,8 @@ button {
   border-radius: 0.25rem;
   color: #ffffff;
 }
+
+.user-card {
+  padding: 1rem;
+  border: 1px solid black;
+}

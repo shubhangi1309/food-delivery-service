@@ -139,7 +139,6 @@ fetch is given by BROWSER's JS ENGINE
 
 browser's blockers are not allowing to call API from one origin to another
 
--------------------------- 4 SEPTEMBER 2024-----------------------
 --------------------------5  SEPTEMBER 2024-----------------------
 whenever state variables update, react triggers a reconciliation cycle (re-renders component)
 JSON VIEWER plugin to view API response pretty
@@ -171,4 +170,7 @@ SPA SINGLE PAGE APP
 2 types of routing in React
 + Client side routing => UI app has all components
 + server side routing => make network call, page is coming from server
+
+--------------------------19 SEPTEMBER 2024-----------------------
+Class based components
 

@@ -3,17 +3,18 @@ import RestaurantCard from "./RestaurantCard";
 import { RESTAURANT_API } from "../../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import restaurantList from "../../utils/mockData";
 
 const Body = () => {
   //Local state variable - SCOPE - inside Component help of HOOK
-  const [listOfRestaurants, setListOfRestaurants] = useState([]); //we pass default value as []
+  const [listOfRestaurants, setListOfRestaurants] = useState(restaurantList); //we pass default value as []
   const [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState(
-    []
+    restaurantList
   );
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
   }, []);
 
   const fetchData = async () => {
