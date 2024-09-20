@@ -173,4 +173,51 @@ SPA SINGLE PAGE APP
 
 --------------------------19 SEPTEMBER 2024-----------------------
 Class based components
+class User extends React.Component/Component {
+    constructor(props) {
+        super(props)
+    }
+    render() { return {}}
+}
+why do we call super(props)?
+without passing props to super, this.props reference would be undefined in the constructor
 
+create STATE
+F) Fn comp => useState
+C) Class comp => this.state = {}
+
+F) invoking a Fn comp means MOUNT it
+C) creating instance of class comp constructor is called, 
+this is best place to receive props and create STATE variables
+
+F) setCount()
+C) this.setState = {}
+
+LIFECYCLE of CLASS C.
+MOUNT
+batch => first constructor is called then render of all (Parent then SIBLINGS)
+
+COMPONENT DID MOUNT - API call made in it (SIBLINGS then parent)
+
+OPTIMISATION
+RENDER phase => batch 1 (constructor, render)
+COMMIT phase => batch 2 (compDidMount) [DOM manipulation SINGLE BATCH]
+
+------MOUNT------
+constructor (MOCK data)
+render      (MOCK data)
+    HTML    (MOCK data)
+Component Did Mount
+    <API call>
+    this.seState -> variable is updated
+
+------UPDATE------
+render(API data)
+<HTML new API data>
+Component Did Update
+
+------UNMOUNT------
+when comp is removed from UI
+
+----------20 SEPT--------
+L-9 OPTIMISING our App

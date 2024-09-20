@@ -51,6 +51,10 @@ h4 {
   width: 13rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .res-card {
   color: #7473b5;
   background: #e6e6fa;
@@ -104,7 +108,16 @@ button {
   color: #ffffff;
 }
 
+.body {
+  color: #7473b5;
+}
 .user-card {
+  color: #000000;
   padding: 1rem;
-  border: 1px solid black;
+  margin-bottom: 0.5rem;
+  border: 1px solid #7473b5;
+}
+
+.avatar {
+  height: 4rem;
 }
