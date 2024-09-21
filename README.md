@@ -244,3 +244,42 @@ check file => web-dev tools > network tab > JS tab > 2 files
 A component suspended while responding to synchronous input.
 React is fast, grocery comp, might take time to load, to handle this state
 SUSPENSE comp is used.
+-------L 10
+UI Frameworks:-
+normal css      scss, sass          styled-comp
+CHAKRA UI       MATERIAL UI          ANT DESIGN
+
+using TAILWIND CSS style comp-
+tailwindcss.com
+install > framework guide > parcel
+
+npm install -D tailwindcss postcss
+npx tailwindcss init => creates tailwind.config.js (for configuring tailwind)
+create => .postcssrc file also (for configuring PostCSS)
+
+POSTCSS => a tool for transforming css with JS
+BTS tailwindcss uses POSTCSS
+
+what will .postcssrc do?
+parcel will use .postcssrc to understand TAILWIND
+
+slight modification in tailwind.config.js for "content"
+it takes list of files where I can use TAILWIND CSS
+
+in index.css put 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+after this we won't  be adding anuthing to css files
+tailwind gives classNames for all css that we want to write
+
+tailwind intelliSense will siggest classes in VS code
+
+con of tailwind => in JS file the className becomes really long
+pro of tailwind => "lightweight"
+it will only import css required for app and
+not the rest of the large number of classes it has
+if we write 100 times m-4 still it will have single m-4
+
+dark-mode is easy

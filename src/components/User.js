@@ -28,7 +28,7 @@ const User = ({ name }) => {
 
     return (
         (
-            <div className = "user-card">
+            <div className = "m-4 p-4 bg-gray-50 rounded-lg">
                 {console.log("User: Fn comp inside JSX")}
             <h2>Name: {name}</h2>
             <h3>Location: Jaipur</h3>

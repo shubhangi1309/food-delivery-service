@@ -1,4 +1,4 @@
-.header {
+/* .header {
   display: flex;
   justify-content: space-between;
   border: 1px solid #cbc3e3;
@@ -122,4 +122,8 @@ button {
 
 .avatar {
   height: 4rem;
-}
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
