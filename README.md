@@ -221,3 +221,26 @@ when comp is removed from UI
 
 ----------20 SEPT--------
 L-9 OPTIMISING our App
+
+Single responsibility principle/ Sepeartion of concerns
+custom hooks => utility function, modular, abstract functionality, reuasable, readable
+
+--------21 sept--------
+Parcel is a bundler
+it bundles all code into 1 file
+check file => web-dev tools > network tab > JS tab > 1 file
+put under DIST folder (DISTRIBUTABLE)
+
+break app down in smaller JS files (smaller bundles)
+CHUNKING/ CODE-SPLITTING/ LAZY LOADING/ DYANMIC BUNDLING/ on-demand loading
+
+REMOVE THIS
+import Grocery from "./components/Grocery";
+ADD THIS
+const Grocery = lazy(() => import("./components/Grocery")); 
+
+check file => web-dev tools > network tab > JS tab > 2 files
+
+A component suspended while responding to synchronous input.
+React is fast, grocery comp, might take time to load, to handle this state
+SUSPENSE comp is used.

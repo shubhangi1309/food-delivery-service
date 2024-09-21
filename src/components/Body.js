@@ -4,6 +4,7 @@ import { RESTAURANT_API } from "../../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import restaurantList from "../../utils/mockData";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 const Body = () => {
   //Local state variable - SCOPE - inside Component help of HOOK
@@ -12,6 +13,7 @@ const Body = () => {
     restaurantList
   );
   const [searchText, setSearchText] = useState("");
+  const onlineStatus = useOnlineStatus();
 
   useEffect(() => {
     // fetchData();
@@ -30,6 +32,14 @@ const Body = () => {
   //Conditional Rendering
   if (filteredListOfRestaurants?.length === 0) {
     return <Shimmer />;
+  }
+
+  if (onlineStatus === false) {
+    return (
+      <div>
+        <h1>Looks like you're offline! Please check your internet.</h1>
+      </div>
+    )
   }
 
   return (
@@ -71,20 +81,18 @@ const Body = () => {
       </div>
       <div className="restaurant-card-container">
         {
-        filteredListOfRestaurants?.map(restaurant => 
-          <Link
-            to={"restaurant/"+restaurant?.info?.id}
-            key={restaurant?.info?.id}
-          >
-            <RestaurantCard resData={restaurant} />
-          </Link>
-        )
-      }
+          filteredListOfRestaurants?.map(restaurant =>
+            <Link
+              key={restaurant?.info?.id}
+              to={"/restaurant/" + restaurant?.info?.id}
+            >
+              <RestaurantCard resData={restaurant} />
+            </Link>
+          )
+        }
       </div>
     </div>
   );
 };
 
 export default Body;
-
-// restaurant?.info?.aggregatedDiscountInfoV3
