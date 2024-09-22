@@ -307,4 +307,25 @@ can we modify "showIndex" state variable of parent from child?
 whenever state needs to be shared with sibling, we lift state up to closest ANCESTOR
 
 what is PROPS DRILLING?
+React is 1 way data flow
+one direction of data flow from parent to child
 
+AVOID PROP DRILLING
+
+Global data which could be accessed from anywhere
+REACT CONTEXT API
+fn CREATE CONTEXT (by R.)
+
+In class based C. we don't have HOOKs
+how to access CONTEXT inside CLASS c.
+contextName.CONSUMER
+UserContext.Consumer
+
+R. gives power of consumer when we create context
+two ways to access CONTEXT
+1) HOOKS
+2) CONSUMER => JSX code, callback fn, access to data
+
+How to pass new info to my whole app
+in App.js we wrap the entire app code in Context.Provider
+and according to use case instead of wrapping entire app we can wrap specific c. as well

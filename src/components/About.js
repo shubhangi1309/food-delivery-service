@@ -1,6 +1,7 @@
 import { Component } from "react";
 import User from "./User";
 import UserClass from "./UserClass";
+import UserContext from "../../utils/UserContext";
 
 class About extends Component {
     constructor(props) {
@@ -27,6 +28,7 @@ class About extends Component {
             {console.log("About: Parent RENDER 2")}
             <h1>About</h1>
             <h2>Food delivery service</h2>
+            <h2>User: <UserContext.Consumer>{(userData)=> userData.loggedInUser}</UserContext.Consumer></h2>
             <User name='Shubhangi Modi (Fn Comp)' />
             {console.log("About: Parent RENDER 3")}
             {/* two instances of same class */}
