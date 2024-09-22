@@ -219,13 +219,13 @@ Component Did Update
 ------UNMOUNT------
 when comp is removed from UI
 
-----------20 SEPT--------
+----------20 SEPT 2024--------
 L-9 OPTIMISING our App
 
 Single responsibility principle/ Sepeartion of concerns
 custom hooks => utility function, modular, abstract functionality, reuasable, readable
 
---------21 sept--------
+--------21 sept 2024--------
 Parcel is a bundler
 it bundles all code into 1 file
 check file => web-dev tools > network tab > JS tab > 1 file
@@ -282,4 +282,29 @@ it will only import css required for app and
 not the rest of the large number of classes it has
 if we write 100 times m-4 still it will have single m-4
 
-dark-mode is easy
+dark-mode is easy with this
+------------------22 sept 2024---------------------
+Higher order C.
+takes C. as i/p and gives C. as o/p
+HOC => enhances the C.
+
+Controlled C. & Un-controlled C.
+Rest-Category, ItemList
+build accordion
+
+React dev tools extension for CHROME
+
+Rest-Menu is parent of Rest-Category
+parent can control to collapse Rest-Category all accrordions
+
+Rest-Category is controlled C. (controlled by parent C.)
+when Rest-Category had it's own state => un-controlled c.
+now state is controlled by parent
+
+can we modify "showIndex" state variable of parent from child?
+
+=> LIFTING STATE UP (to control child C.)
+whenever state needs to be shared with sibling, we lift state up to closest ANCESTOR
+
+what is PROPS DRILLING?
+
