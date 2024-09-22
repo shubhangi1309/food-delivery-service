@@ -8,8 +8,7 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(0);
   const { resId } = useParams();
   const menuData = useRestaurantMenu(resId);
-  console.log(menuData?.categoriesRecommended);
-
+  
   return menuData === null ? <Shimmer /> : (
     <div className="text-center">
       <h1 className="font-bold my-6 text-2xl">{menuData?.name}</h1>

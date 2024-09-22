@@ -329,3 +329,11 @@ two ways to access CONTEXT
 How to pass new info to my whole app
 in App.js we wrap the entire app code in Context.Provider
 and according to use case instead of wrapping entire app we can wrap specific c. as well
+* for same context diff value can be given to diff C.
+
+UPDATE CONTEXT how?
+the state variable "setUserName" of App C. how can that be used in Body C.?????
+by passing that in Provider
+
+Context is very powerful for smale/medium apps
+REDUX is for LARGE apps

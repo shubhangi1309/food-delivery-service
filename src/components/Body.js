@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { RESTAURANT_API } from "../../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import restaurantList from "../../utils/mockData";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 const Body = () => {
   //Local state variable - SCOPE - inside Component help of HOOK
@@ -45,6 +46,8 @@ const Body = () => {
     )
   }
 
+  const { loggedInUser ,setUserName } = useContext(UserContext);
+
   return (
     <div className="body ml-12">
       <div className="filter">
@@ -80,6 +83,8 @@ const Body = () => {
           >
             Top Rated Restaurants
           </button>
+          <label className="ml-8" >UserName : </label>
+          <input className="ml-2 border border-black p-2" value={loggedInUser} onChange={(e) => setUserName(e.target.value)}/>
         </div>
       </div>
       <div className="flex flex-wrap">
