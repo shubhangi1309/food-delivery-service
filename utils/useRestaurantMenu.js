@@ -22,6 +22,23 @@ const useRestaurantMenu = (resId) => {
         setFetchedMenuData(restaurantMenu?.info);
     }
 
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('https://api.example.com/data'); // Replace with your API URL
+            if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+            }
+            const result = await response.json();
+            setData(result);
+          } catch (error) {
+            setError(error.message);
+          }
+        };
+    
+        fetchData();
+      }, []);
+
     return fetchedMenuData;
 }
 

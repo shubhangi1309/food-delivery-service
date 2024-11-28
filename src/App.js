@@ -9,6 +9,8 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import UserContext from "../utils/UserContext";
 // import Grocery from "./components/Grocery";  we will have to REMOVE THIS
+import { Provider } from "react-redux";
+import appStore from "../utils/appStore";
 
 const Grocery = lazy(() => import("./components/Grocery")); // ADD THIS
 const About = lazy(() => import("./components/About")); // ADD THIS
@@ -22,14 +24,28 @@ const AppLayout = () => {
     setUserName(data.name);
   }, []);
 
+  // CONTEXT API TYPE
+  // return (
+  //   <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+  //     <div className="app">
+  //       <Header />
+  //       <Outlet />
+  //     </div>
+  //   </UserContext.Provider>
+  // );
+
+  // REDUX TYPE
   return (
-    <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
-      <div className="app">
-        <Header />
-        <Outlet />
-      </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UserContext.Provider>
+    </Provider>
   );
+  
 };
 
 const appRouter = createBrowserRouter([

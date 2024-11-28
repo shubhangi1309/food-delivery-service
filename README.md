@@ -1,5 +1,5 @@
 ------------1 september 2024-------Food delivery service web app------
-to minify files, exclude comments, optimise images, to make prodcution ready
+to minify files, exclude comments, optimise images, to make production ready
 bundling, code splitting, compression, chunking, minification
 
 react itself, can't do above things
@@ -12,19 +12,19 @@ but we use just "npm init" to add configurations
 package.json is configuration for npm, can have tilde caret
 npm will take care of dependencies & it's versions
 
-Importnant package => BUNDLER => WEBPACK/ PARCEL/ VITE
+Important package => BUNDLER => WEBPACK/ PARCEL/ VITE
 
 we use PARCEL (easy to configure)
 npm i -D parcel (DEV DEPENDECY) vs Normal Dependency
 
 package-lock.json => tracks exact version installed
 what is integrity?
-it's a hash, SHA512, this hash
+it's a hash, SHA512 (secure hashing algo), this hash
 have you heard of it is working on my local but not on production?
 to avoid that package-lock keeps a HASH to verify,
 whatever is present on my machine is same version deployed on PROD envt
 
-babel was installed auto when parcel was installed.
+babel was installed auto- when parcel was installed.
 
 we will use parcel to ignite our app
 how?
@@ -337,3 +337,59 @@ by passing that in Provider
 
 Context is very powerful for smale/medium apps
 REDUX is for LARGE apps
+
+--------------23 SEPTEMBER 2024----------L-12----------
+REDUX, ZUSTAND are options for large data handling.
+why do we use REDUX?
+handling state of app
+app is easier to debug (REDUX dev tools)
+A predictable state container for JS Apps
+state mgmt
+
+React-Redux lib is bridge b/w REACT & REDUX
+Redux-Toolkit lib newer way of writing Redux => std way to write REDUX logic
+3 common concerns are solved by Redux-Toolkit lib:-
+Configuring a Redux store is too complicated
+had to add a lot of packages to get Redux do anything
+Redux required too much boilerplate code
+
+Feature => CART (build using Redux)
+to store CART info we will use Redux store
+
+Redux Architecture => 
+Redux store (central place) => can be accessed by any C. in our app
+write, read DATA from that store, it's like a VERY BIG OBJECT
+
+is it a good practice to keep all data in 1 big obj?
+Yes
+
+too escape from it being clumsy => SLICES
+logical seperation = SLICES
+CART, USER, THEME
+
+we can't directly add/MODIFY data to CART slice
+to add/MODIFY cart
+1) click on ADD btn DISPATCH an ACTION
+2) DISPATCH an ACTION => ACTION calls a REDUCER FUNCTION
+3) FUNCTION internally MODIFIES the cart
+4) this FUNCTION is know as REDUCER
+
+how can I read data from SLICE?
+1) with help of SELECTOR
+2) SELECTOR will modify Component that wants to read DATA
+3) this phenomena is known as SUBSCRIBING TO STORE
+
+Redux Toolkit
+1) install @reduxjs/toolkit and react-redux
+2) build our store
+3) connect our store to our app
+4) SLICE (cartSlice)
+5) dispatch(action)
+6) SELECTOR it's a hook
+
+Provide STORE to root of our App
+
+
+https://codesandbox.io/p/sandbox/3-pokemon-3p9sx
+
+https://react-bootstrap.netlify.app/docs/components/modal/

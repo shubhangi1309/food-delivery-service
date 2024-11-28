@@ -2,6 +2,7 @@ import { Component } from "react";
 import User from "./User";
 import UserClass from "./UserClass";
 import UserContext from "../../utils/UserContext";
+import CounterTimeout from "./CounterTimeout";
 
 class About extends Component {
     constructor(props) {
@@ -35,6 +36,7 @@ class About extends Component {
             <UserClass role="Web UI Engineer"/>
             <UserClass role="Full Stack Engineer"/>
             {console.log("About: Parent RENDER 4")}
+            <CounterTimeout/>
         </div>)
     }
 }
